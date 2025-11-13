@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3561E9BB-2016-4598-A2A9-4BA2B3DC7172}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileTransferTool.Domain", "src\FileTransferTool.Domain\FileTransferTool.Domain.csproj", "{D532DA34-2B78-4F36-9890-936F998A1803}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileTransferTool.Application", "src\FileTransferTool.Application\FileTransferTool.Application.csproj", "{2C318C7A-533B-4B81-9D50-F3B52CA0BDA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileTransferTool.Infrastructure", "src\FileTransferTool.Infrastructure\FileTransferTool.Infrastructure.csproj", "{E5EFF845-EF1E-48E1-B992-037CFA58B42D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileTransferTool.Presentation", "src\FileTransferTool.Presentation\FileTransferTool.Presentation.csproj", "{9036E375-C988-49AD-AE5A-E68242605BED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D532DA34-2B78-4F36-9890-936F998A1803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D532DA34-2B78-4F36-9890-936F998A1803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D532DA34-2B78-4F36-9890-936F998A1803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D532DA34-2B78-4F36-9890-936F998A1803}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C318C7A-533B-4B81-9D50-F3B52CA0BDA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C318C7A-533B-4B81-9D50-F3B52CA0BDA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C318C7A-533B-4B81-9D50-F3B52CA0BDA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C318C7A-533B-4B81-9D50-F3B52CA0BDA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5EFF845-EF1E-48E1-B992-037CFA58B42D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5EFF845-EF1E-48E1-B992-037CFA58B42D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5EFF845-EF1E-48E1-B992-037CFA58B42D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5EFF845-EF1E-48E1-B992-037CFA58B42D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9036E375-C988-49AD-AE5A-E68242605BED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9036E375-C988-49AD-AE5A-E68242605BED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9036E375-C988-49AD-AE5A-E68242605BED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9036E375-C988-49AD-AE5A-E68242605BED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D532DA34-2B78-4F36-9890-936F998A1803} = {3561E9BB-2016-4598-A2A9-4BA2B3DC7172}
+		{2C318C7A-533B-4B81-9D50-F3B52CA0BDA5} = {3561E9BB-2016-4598-A2A9-4BA2B3DC7172}
+		{E5EFF845-EF1E-48E1-B992-037CFA58B42D} = {3561E9BB-2016-4598-A2A9-4BA2B3DC7172}
+		{9036E375-C988-49AD-AE5A-E68242605BED} = {3561E9BB-2016-4598-A2A9-4BA2B3DC7172}
+	EndGlobalSection
+EndGlobal
