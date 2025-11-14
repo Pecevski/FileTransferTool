@@ -1,5 +1,8 @@
 ﻿namespace FileTransferTool.Application.DTOs
 {
+    /// <summary>
+    /// Output DTO representing the progress of a file transfer operation.
+    /// </summary>
     public class TransferProgressDto
     {
         public long TotalBytes { get; set; }

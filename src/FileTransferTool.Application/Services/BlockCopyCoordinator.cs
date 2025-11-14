@@ -100,7 +100,7 @@ namespace FileTransferTool.Application.Services
             }
             catch (OperationCanceledException)
             {
-                // one of the blocks signalled cancel; swallow so we can return partial results
+                throw;
             }
 
             return results.ToList().OrderBy(b => b.BlockNumber).ToList();
