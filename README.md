@@ -71,6 +71,3 @@ The tool divides files into manageable 1MB blocks and processes them concurrentl
 - **Concurrency Model:** Async/Await with `Task Parallel Library (TPL)`
 - **Hashing Algorithms:** MD5, SHA256 (.NET built-in cryptography)
 
-### Project Structure
-
-The application follows **Clean Architecture** principles with clear separation of concerns:
