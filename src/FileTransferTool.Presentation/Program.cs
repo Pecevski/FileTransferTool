@@ -16,7 +16,7 @@ class Program
         services.AddSingleton<IBlockTransferService, BlockTransferService>();
         services.AddSingleton<IProgressReporter, ConsoleProgressReporter>();
 
-        // IFileTransferUseCase requires two different IHashCalculator implementations: MD5 for per-block, SHA256 for full-file
+        // IFileTransferUseCase requires two different IHashCalculator implementations: MD5 for per-block, SHA256 for full-file.
         services.AddSingleton<IFileTransferUseCase>(sp =>
             new FileTransferUseCase(
                 sp.GetRequiredService<IBlockTransferService>(),

@@ -1,7 +1,7 @@
 ﻿namespace FileTransferTool.Domain.Enums
 {
     /// <summary>
-    /// Enum for block transfer operations states.
+    /// Enum representing block transfer operation states.
     /// </summary>
     public enum BlockTransferStatus
     {
