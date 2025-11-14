@@ -10,20 +10,18 @@ class Program
 {
     static async Task<int> Main(string[] args)
     {
-        // Composition root: register concrete implementations and the app runner
         var services = new ServiceCollection();
 
         // Infrastructure / presentation bindings
         services.AddSingleton<IBlockTransferService, BlockTransferService>();
         services.AddSingleton<IProgressReporter, ConsoleProgressReporter>();
 
-        // IFileTransferUseCase requires two different IHashCalculator implementations,
-        // so register it with a factory that constructs the calculators explicitly.
+        // IFileTransferUseCase requires two different IHashCalculator implementations: MD5 for per-block, SHA256 for full-file
         services.AddSingleton<IFileTransferUseCase>(sp =>
             new FileTransferUseCase(
                 sp.GetRequiredService<IBlockTransferService>(),
-                new MD5HashCalculator(),    // per-block
-                new SHA256HashCalculator(), // full-file
+                new MD5HashCalculator(),
+                new SHA256HashCalculator(),
                 sp.GetRequiredService<IProgressReporter>()));
 
         // App runner

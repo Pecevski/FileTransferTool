@@ -67,10 +67,9 @@ namespace FileTransferTool.Presentation
                         var choice = Console.ReadLine()?.Trim().ToUpperInvariant() ?? string.Empty;
 
                         if (string.IsNullOrEmpty(choice) || choice == "Y" || choice == "YES")
-                            break; // proceed
+                            break; 
                         if (choice == "E" || choice == "EXIT")
-                            return 0; // exit app
-                        // otherwise loop to re-enter
+                            return 0;
                     }
 
                     var threadCount = GetThreadCount();
@@ -110,7 +109,7 @@ namespace FileTransferTool.Presentation
                     Console.WriteLine("\n=== Transfer Summary ===");
                     Console.WriteLine($"Successful Blocks: {result.SuccessfulBlocks}/{result.BlockCount}");
                     Console.WriteLine($"Failed Blocks: {result.FailedBlocks}/{result.BlockCount}");
-                    Console.WriteLine($"Overall Status: {(result.IsSuccessful ? "✓ SUCCESS" : "✗ FAILED")}");
+                    Console.WriteLine($"Overall Status: {(result.IsSuccessful ? "✓ SUCCESS" : "X FAILED")}");
 
                     // Block list & checksums (requirement #6)
                     Console.WriteLine("\n=== Block Checksums ===");
@@ -129,10 +128,10 @@ namespace FileTransferTool.Presentation
                     if (again.StartsWith("Y"))
                     {
                         Console.WriteLine();
-                        continue; // repeat outer loop for a new transfer
+                        continue;
                     }
 
-                    return lastExitCode; // exit app with last transfer code
+                    return lastExitCode;
                 }
 
                 return lastExitCode;

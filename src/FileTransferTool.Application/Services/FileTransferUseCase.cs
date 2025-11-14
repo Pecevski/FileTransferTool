@@ -220,7 +220,6 @@ namespace FileTransferTool.Application.Services
             }
             catch (Exception ex) when (ex is IOException || ex is NotSupportedException)
             {
-                // propagate a clearer message
                 throw new IOException($"Directory '{directory}' is not writable: {ex.Message}", ex);
             }
             finally
