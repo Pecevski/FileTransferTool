@@ -13,15 +13,6 @@ namespace FileTransferTool.Infrastructure.Services
             byte[] data,
             CancellationToken cancellationToken)
         {
-            if (string.IsNullOrWhiteSpace(filePath))
-                throw new ArgumentException("filePath is required", nameof(filePath));
-            if (data == null) throw new ArgumentNullException(nameof(data));
-            if (offset < 0) throw new ArgumentOutOfRangeException(nameof(offset));
-            if (data.Length == 0) return;
-
-            // Destination file MUST be pre-allocated once by the caller (FileTransferUseCase).
-            if (!File.Exists(filePath))
-                throw new FileNotFoundException($"Destination file not found: {filePath}. Ensure pre-allocation.");
 
             // Allow concurrent readers/writers; use async IO and consistent buffer size.
             using var stream = new FileStream(
@@ -33,8 +24,8 @@ namespace FileTransferTool.Infrastructure.Services
                 FileOptions.Asynchronous);
 
             stream.Seek(offset, SeekOrigin.Begin);
-            await stream.WriteAsync(data, 0, data.Length, cancellationToken).ConfigureAwait(false);
-            await stream.FlushAsync(cancellationToken).ConfigureAwait(false);
+            await stream.WriteAsync(data, 0, data.Length, cancellationToken);
+            await stream.FlushAsync(cancellationToken);
         }
     }
 }

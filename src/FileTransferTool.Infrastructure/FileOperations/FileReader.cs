@@ -24,7 +24,7 @@ namespace FileTransferTool.Infrastructure.Services
 
             stream.Seek(offset, SeekOrigin.Begin);
             var buffer = new byte[(int)length];
-            await stream.ReadExactlyAsync(buffer, 0, buffer.Length, cancellationToken).ConfigureAwait(false);
+            await stream.ReadExactlyAsync(buffer, 0, buffer.Length, cancellationToken);
             return buffer;
         }
     }
